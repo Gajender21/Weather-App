@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Dancing+Script:wght@600&family=Gluten:wght@200;300;400&family=Roboto&family=Sedgwick+Ave+Display&family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet"  href="/styles/style.css">
+
+</head>
+<body>
+    <div id="bg-image"></div>
+   
+    <div id="container">
+        
+        
+        <form action="submit" method="post">
+            <input type="text" name="city" id="" placeholder="Search">
+            <button type="submit">🔍</button>
+        </form>
+ 
+        <div id="display">
+            <% if(locals.dataDescription) {%>
+                <h1><%= dataName  %></h1>
+                <h1> <%= dataDescription %></h1>
+                <% } %>
+                <% if(locals.dataTemp) {%>
+           <span><img id="wicon" src="<%= dataIcon %>" alt="Weather icon"></span> <h1><%= dataTemp %>°C</h1>
+            <% } %>
+        </div>
+
+        <p>
+            
+        </p>
+    </div>
+</body>
+</html>
